@@ -203,6 +203,10 @@ final class LayoutConstraints {
         self.view.removeConstraints(constraints)
     }
     
+     func clearLastConstraints() {
+        self.view.removeConstraint(constraints.last!)
+        self.constraints.removeLast()
+    }
     
     deinit {
         constraints = []
